@@ -8,7 +8,9 @@ def pow(a, b):
     x = a
     for i in range(1, b):
         if a < 0:
-            a = -a * x
+            a = -a
+            a = a * x
+            a = -a
         else:
             a = a * x
     return (a)
