@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 if __name__ == '__main__':
     def magic_calculation(a, b):
-        import magic_calculation_102 as magic
-        if a < b:
-            c = magic.add(a, b)
-            for i in range(4, 6):
-                c = magic.add(c, i)
-            return c
-        else:
-            return magic.sub(a, b)
+    add = magic_calculation_102.add
+    sub = magic_calculation_102.sub
+
+    if a < b:
+        c = add(a, b)
+        for i in range(4, 6):
+            c = add(c, i)
+        return c
+    else:
+        return sub(a, b)
