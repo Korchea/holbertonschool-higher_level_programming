@@ -17,5 +17,9 @@ def roman_to_int(roman_string):
                     elif roman_string[i - 1] == pre_key and pre_value < value:
                         sum += (value - pre_value)
                         break
+                    elif pre_key == 'M':
+                        return 0
                 break
+            elif key == 'M':
+                return 0
     return sum
