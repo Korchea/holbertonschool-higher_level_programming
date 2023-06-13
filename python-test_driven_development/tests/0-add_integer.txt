@@ -1,0 +1,86 @@
+===============================
+ Test 0-add_integer.py
+===============================
+
+This library is very simple, since it only has one function called
+``add_integer(a, b=98)``.
+
+Numbers
+=======
+
+add_integer(a, b=98)`` returns the add of its arguments.  For numbers,
+that value is equivalent to using the ``+`` operator.
+
+::
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(1, 2)
+    3
+
+It also works with negative values.
+
+::
+
+    >>> add_integer(100, -2)
+    98
+
+It also works with single values.
+
+::
+
+    >>> add_integer(2)
+    100
+
+It also works with float and negative values.
+
+::
+
+    >>> add_integer(100.3, -2)
+    98
+
+It also works with float infinite values.
+
+::
+
+    >>> add_integer(float('inf'), -2)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+It also works with float infinite values.
+
+::
+
+    >>> add_integer(float('nan'), -2)
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+
+Non-Numbers
+===========
+
+It also works with strings and values.
+
+::
+
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+It also works with None.
+
+::
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+It also works with a number and a char
+::
+
+    >>> add_integer(4, "1")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
