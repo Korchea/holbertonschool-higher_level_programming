@@ -1,0 +1,51 @@
+===============================
+ Test 3-say_my_name.py
+===============================
+
+This library is very simple, since it only has one function called
+``def say_my_name(first_name, last_name="")``.
+
+Numbers
+=======
+
+``def say_my_name(first_name, last_name="")`` print two strings.
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+It also works with None last_name.
+
+::
+
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+It also works with no strings.
+
+::
+
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+It also works with no strings.
+
+::
+
+    >>> say_my_name("Walter", 12)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+It also works with None string.
+
+::
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
