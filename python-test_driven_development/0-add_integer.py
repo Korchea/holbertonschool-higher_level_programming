@@ -16,7 +16,7 @@ def add_integer(a, b=98):
         TypeError: "b must be an integer"
 
     Returns:
-        _type_: a + b
+        int: a + b
     """
     if not type(a) == int and not type(a) == float:
         raise TypeError("a must be an integer")
