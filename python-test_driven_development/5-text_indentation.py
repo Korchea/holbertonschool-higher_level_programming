@@ -20,6 +20,6 @@ def text_indentation(text):
             print(i)
             print()
             flag = True
-        elif i != ' ' or flag == False:
+        elif i != ' ' or not flag:
             print(i, end="")
             flag = False
