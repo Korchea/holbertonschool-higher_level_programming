@@ -1,0 +1,50 @@
+===============================
+ Test 5-text_indentation.py
+===============================
+
+This library is very simple, since it only has one function called
+``def text_indentation(text)``.
+
+Numbers
+=======
+
+``def text_indentation(text):``.
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("""This is. to test? one: I think that yes""")
+    This is.
+    <BLANKLINE>
+    to test?
+    <BLANKLINE>
+    one:
+    <BLANKLINE>
+    I think that yes
+
+It also works with no strings.
+
+::
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+It also works with no strings.
+
+::
+
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+It also works with None.
+
+::
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
