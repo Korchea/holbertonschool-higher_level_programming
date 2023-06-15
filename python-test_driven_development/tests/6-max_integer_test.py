@@ -16,16 +16,13 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer([1, 2, 4, 3]), 4)
 
     def none_case(self):
-        self.assertEqual('[None]'.max_integer(), 'None')
+        self.assertAlmostEqual(max_integer([None]), None)
 
     def empty_case(self):
-        self.assertEqual(''.max_integer(), 'None')
+        self.assertAlmostEqual(max_integer(), None)
 
     def negative_case(self):
-        self.assertEqual('[-1]'.max_integer(), '-1')
-
-    def string_case(self):
-        self.assertEqual('["Hi"]'.max_integer(), 'Hi')
+        self.assertAlmostEqual(max_integer([-1]), -1)
 
 
 if __name__ == '__main__':
