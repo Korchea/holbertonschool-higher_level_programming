@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-
+"""max_integer_test
+"""
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 
 class max_integer_test(unittest.TestCase):
+    """max_integer_test
+
+    Args:
+        unittest: Just cases to tests
+    """
 
     def standar_case(self):
         self.assertEqual('[1, 2, 4, 3]'.max_integer(), '4')
