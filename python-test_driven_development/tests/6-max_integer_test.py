@@ -26,7 +26,3 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_string(self):
         self.assertEqual('["Hi"]'.max_integer(), 'Hi')
-
-
-if __name__ == '__main__':
-    unittest.main()
