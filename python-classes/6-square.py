@@ -60,7 +60,7 @@ class Square:
         else:
             for x in range(self.position[1]):
                 print()
-            for i in range(self.size):
+            for i in range(0, self.size):
                 for y in range(self.position[0]):
                     print(" ", end="")
                 for j in range(self.size):
