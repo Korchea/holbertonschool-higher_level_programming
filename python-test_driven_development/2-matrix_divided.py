@@ -23,6 +23,8 @@ def matrix_divided(matrix, div):
     txt = "matrix must be a matrix (list of lists) of integers/floats"
     if type(matrix) != list:
         raise TypeError(txt)
+    if len(matrix) == 0:
+        raise TypeError(txt)
     matrix_cpy = matrix.copy()
     aux = -1
     if not type(div) == int and not type(div) == float:
