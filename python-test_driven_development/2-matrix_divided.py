@@ -32,7 +32,7 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     for i in range(len(matrix_cpy)):
-        if not i or type(i) != list:
+        if not matrix[i] or type(matrix[i]) != list:
             raise TypeError(txt)
         if aux != -1 and aux != len(matrix_cpy[i]):
             raise TypeError("Each row of the matrix must have the same size")
