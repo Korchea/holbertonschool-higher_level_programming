@@ -23,7 +23,7 @@ def matrix_divided(matrix, div):
     txt = "matrix must be a matrix (list of lists) of integers/floats"
     if type(matrix) != list:
         raise TypeError(txt)
-    if len(matrix) == 0:
+    if not matrix:
         raise TypeError(txt)
     matrix_cpy = matrix.copy()
     aux = -1
@@ -32,6 +32,8 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     for i in range(len(matrix_cpy)):
+        if not matrix[i] or type(matrix[i]) != list:
+            raise TypeError(txt)
         if aux != -1 and aux != len(matrix_cpy[i]):
             raise TypeError("Each row of the matrix must have the same size")
         for j in range(len(matrix_cpy[i])):
