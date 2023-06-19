@@ -5,6 +5,11 @@ In this file I create a class MyList
 
 
 class MyList(list):
+    """MyList
+
+    Args:
+        list (list): Is a list
+    """
 
     def print_sorted(self):
         """print_sorted
