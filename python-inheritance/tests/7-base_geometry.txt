@@ -102,3 +102,10 @@ This library is very simple, since it only has one class called BaseGeometry.
     Traceback (most recent call last):
         ...
     SyntaxError: invalid syntax
+
+::
+
+    >>> bg.area(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: area() takes 1 positional argument but 2 were given
