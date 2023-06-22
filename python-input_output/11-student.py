@@ -33,6 +33,5 @@ class Student():
             return sorted_dict
 
     def reload_from_json(self, json):
-        self.age = json['age']
-        self.last_name = json['last_name']
-        self.first_name = json['first_name']
+        for j in json:
+            self.__dict__[j] = json[j]
