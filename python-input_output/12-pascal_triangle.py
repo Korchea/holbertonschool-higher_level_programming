@@ -1,5 +1,17 @@
 #!/usr/bin/python3
+"""pascal_triangle
+"""
+
+
 def pascal_triangle(n):
+    """pascal_triangle
+
+    Args:
+        n (int): Is the size
+
+    Returns:
+        list: Is a list of list, a pascal triangle
+    """
     pascal = []
     for i in range(n):
         pascal.append([1])
