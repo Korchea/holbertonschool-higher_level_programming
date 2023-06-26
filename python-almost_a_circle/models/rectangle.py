@@ -73,3 +73,9 @@ class Rectangle(Base):
             int: Is the area
         """
         return self.__height * self.__width
+
+    def display(self):
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("#", end="")
+            print()
