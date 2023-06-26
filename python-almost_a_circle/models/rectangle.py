@@ -75,6 +75,8 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self):
+        """display
+        """
         for i in range(self.__height):
             for j in range(self.__width):
                 print("#", end="")
