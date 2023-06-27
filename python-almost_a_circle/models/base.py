@@ -25,7 +25,7 @@ class Base():
         Returns:
             dict
         """
-        if not list_dictionaries:
+        if not list_dictionaries or list_dictionaries == []:
             return []
         else:
             return json.dumps(list_dictionaries)
