@@ -17,6 +17,14 @@ class Base():
             self.id = id
 
     def to_json_string(list_dictionaries):
+        """to_json_string
+
+        Args:
+            list_dictionaries (list)
+
+        Returns:
+            dict
+        """
         if not list_dictionaries:
             return []
         else:
