@@ -40,3 +40,17 @@ class Base():
                 list_to_save.append(i.to_dictionary())
         with open(name, 'w') as file:
             file.write(cls.to_json_string(list_to_save))
+
+    def from_json_string(json_string):
+        """from_json_string
+
+        Args:
+            json_string (dict):
+
+        Returns:
+            str:
+        """
+        if not json_string:
+            return []
+        else:
+            return json.loads(json_string)
