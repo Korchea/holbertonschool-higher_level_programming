@@ -41,6 +41,7 @@ class Base():
         with open(name, 'w') as file:
             file.write(cls.to_json_string(list_to_save))
 
+    @staticmethod
     def from_json_string(json_string):
         """from_json_string
 
@@ -54,3 +55,12 @@ class Base():
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        else:
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
