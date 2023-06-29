@@ -73,8 +73,11 @@ class Base():
             list: Is a list of instances
         """
         name = "{}.json".format(cls.__name__)
-        with open(name, 'r') as file:
+        try:
+            file = open(name, 'r')
             f = file.read()
+        except:
+            return []
         f_cls = cls.from_json_string(f)
         list = []
         for i in range(len(f_cls)):
