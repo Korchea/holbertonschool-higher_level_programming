@@ -13,9 +13,8 @@ if __name__ == '__main__':
 
     connection = engine.connect()
     states = db.select(State.id, State.name).order_by(State.id)
-    result = connection.execute(states).fetchall()
-
+    result = connection.execute(states).fetchone()
     if result:
-        print("{}: {}".format(result[0][0], result[0][1]))
+        print("{}: {}".format(result[0], result[1]))
     else:
         print("Nothing")
