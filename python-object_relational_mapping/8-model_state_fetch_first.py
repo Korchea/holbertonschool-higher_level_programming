@@ -15,7 +15,7 @@ if __name__ == '__main__':
     states = db.select(State.id, State.name).order_by(State.id)
     result = connection.execute(states).fetchall()
 
-    if result is None:
-        print("Nothing")
-    else:
+    if result:
         print("{}: {}".format(result[0][0], result[0][1]))
+    else:
+        print("Nothing")
