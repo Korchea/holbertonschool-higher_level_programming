@@ -1,7 +1,5 @@
-toChange = document.querySelector(header);
+const toChange = document.querySelector("#red_header");
 function doit() {
     toChange.style.color = "#FF0000";
 }
-toChange.forEach(header => {
-    toChange.addEventListener("click", doit);
-});
+toChange.addEventListener("click", doit);

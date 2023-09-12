@@ -1,7 +1,5 @@
-toChange = document.querySelector(.red);
-function doit() {
-    ...;
+toChange = document.querySelector("#red_header");
+function doIt() {
+    toChange.classList.add("red");
 }
-toChange.forEach(red => {
-    toChange.addEventListener("click", doit);
-});
+toChange.addEventListener("click", doIt);
