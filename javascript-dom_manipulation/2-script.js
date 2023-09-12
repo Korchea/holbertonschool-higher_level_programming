@@ -1,5 +1,5 @@
 toChange = document.querySelector("#red_header");
 function doIt() {
-    toChange.classList.add("red");
+    document.querySelector("header").classList.add("red");
 }
 toChange.addEventListener("click", doIt);
